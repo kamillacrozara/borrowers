@@ -24,7 +24,7 @@ export default Ember.Component.extend({
                     }, (err) => {
                         this.set('errorMessage', 'there was something wrong saving the model');
                     }
-                )
+                );
             } else {
                 this.set('errorMessage', 'You have to fill all the fields');
             }
@@ -34,7 +34,7 @@ export default Ember.Component.extend({
         cancel() {
             console.log('+- cancel action in edit-form component');
 
-            this.cancel();
+            this.cancel(this.get('model'));
         }
     }
 });
